@@ -11,7 +11,7 @@ Class: Programming Languages and Paradigms
 - [Imperative](#imperative)
 - [Object Oriented](#object-oriented)
 
-[![cin](http://www.cin.ufpe.br/~in1007/linguagens/imagens/img001.gif)](http://www.cin.ufpe.br/~in1007/linguagens/imagens/img001.gif)
+![](images/img001.gif)
 
 ### Expressions
 
