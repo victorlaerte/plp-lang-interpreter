@@ -1,6 +1,6 @@
 # plp-lang-interpreter-lesson
 
-Professor: [Augusto Sampaio](http://www.cin.ufpe.br/~acas/) (Center for Informatics (UFPE)
+Professor: [Augusto Sampaio](http://www.cin.ufpe.br/~acas/) - Center for Informatics (UFPE)
 
 Class: Programming Languages and Paradigms
 
