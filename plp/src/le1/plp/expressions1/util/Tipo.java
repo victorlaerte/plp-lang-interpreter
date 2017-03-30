@@ -21,6 +21,14 @@ public interface Tipo {
 	public abstract boolean eInteiro();
 
 	/**
+	 * Indica se esta expressao &eacute; inteira.
+	 * 
+	 * @return <code>true</code> se esta expressao for inteira;
+	 *         <code>false</code> caso contrario.
+	 */
+	public abstract boolean eChar();
+
+	/**
 	 * Indica se esta expressao &eacute; booleana.
 	 * 
 	 * @return <code>true</code> se esta expressao for booleana;
