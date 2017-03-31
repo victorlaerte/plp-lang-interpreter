@@ -59,7 +59,7 @@ Class: Programming Languages and Paradigms
 - The context includes three components: A (dynamic) mapping of identifiers into values; a list of input values; a list of output values
 - A program is a command
 
-### Impreative Language 2
+### Impreative Language 2 (Code Not Found, not avaliable on site)
 
 - Extends Imperative Language 1 with parameterized and recursive procedures
 - The body of a procedure is a command and the call of an idem procedure
