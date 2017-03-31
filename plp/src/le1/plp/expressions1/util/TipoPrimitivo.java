@@ -11,7 +11,9 @@ public enum TipoPrimitivo implements Tipo {
 
 	INTEIRO("INTEIRO"),
 	BOOLEANO("BOOLEANO"),
-	STRING("STRING");
+	STRING("STRING"),
+	CHAR("CHAR"),
+	REAL("REAL");
 
 	protected String nome;
 
@@ -48,6 +50,20 @@ public enum TipoPrimitivo implements Tipo {
 	 */
 	public boolean eString() {
 		return this.eIgual(STRING);
+	}
+	
+	/* (non-Javadoc)
+	 * @see le1.plp.expressions1.util.Tipo#eChar()
+	 */
+	public boolean eChar() {
+		return this.eIgual(CHAR);
+	}
+
+	/* (non-Javadoc)
+	 * @see le1.plp.expressions1.util.Tipo#eReal()
+	 */
+	public boolean eReal() {
+		return this.eIgual(REAL);
 	}
 
 	/* (non-Javadoc)

@@ -35,6 +35,22 @@ public interface Tipo {
 	 *         <code>false</code> caso contrario.
 	 */
 	public abstract boolean eString();
+	
+	/**
+	 * Indica se esta expressao &eacute; char.
+	 * 
+	 * @return <code>true</code> se esta expressao for char;
+	 *         <code>false</code> caso contrario.
+	 */
+	public abstract boolean eChar();
+	
+	/**
+	 * Indica se esta expressao &eacute; real.
+	 * 
+	 * @return <code>true</code> se esta expressao for valor real;
+	 *         <code>false</code> caso contrario.
+	 */
+	public abstract boolean eReal();
 
 	/**
 	 * Compara este tipo com o tipo dado.
