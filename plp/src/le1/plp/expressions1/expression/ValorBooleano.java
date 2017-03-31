@@ -9,7 +9,6 @@ import le1.plp.expressions2.memory.AmbienteCompilacao;
  */
 public class ValorBooleano extends ValorConcreto<Boolean> {
 
-	
 	/**
 	 * Cria um objeto encapsulando o valor booleano fornecido.
 	 */
@@ -17,7 +16,6 @@ public class ValorBooleano extends ValorConcreto<Boolean> {
 		super(valor);
 	}
 
-	
 	/**
 	 * Retorna os tipos possiveis desta expressao.
 	 * 
@@ -26,9 +24,10 @@ public class ValorBooleano extends ValorConcreto<Boolean> {
 	 * 
 	 * @return os tipos possiveis desta expressao.
 	 */
+	@Override
 	public Tipo getTipo(AmbienteCompilacao amb) {
+
 		return TipoPrimitivo.BOOLEANO;
 	}
-
 
 }
