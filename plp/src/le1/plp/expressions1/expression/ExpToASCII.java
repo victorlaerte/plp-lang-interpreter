@@ -20,7 +20,7 @@ public class ExpToASCII extends ExpUnaria {
 	}
 
 	/**
-	 * Retorna o valor da Expressao de tamanho de uma String.
+	 * Retorna o valor da Expressao de ASCII code de um Char.
 	 * 
 	 * @param amb
 	 *            o ambiente de execu��o.
