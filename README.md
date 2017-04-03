@@ -83,5 +83,5 @@ Class: Programming Languages and Paradigms
 - Não permite overloading, redefinição de métodos, super e nem modificadores de acesso
 
 # Exercises
-- Implement Char type and a function to show ASCII value for a char, branche: [victor-char-exercise](https://github.com/victorlaerte/plp-lang-interpreter/tree/victor-char-exercise) <b>DONE</b>
-- Implement let declaration sequentialy instead collateral, branche: [victor-sequential-let](https://github.com/victorlaerte/plp-lang-interpreter/tree/victor-sequential-let) <b>DOING</b>
+- Implement Char type and a function to show ASCII value for a char, branche: [victor-char-exercise](https://github.com/victorlaerte/plp-lang-interpreter/tree/victor-char-exercise) - <b>DONE</b>
+- Implement let declaration sequentialy instead collateral, branche: [victor-sequential-let](https://github.com/victorlaerte/plp-lang-interpreter/tree/victor-sequential-let) - <b>DOING</b>
