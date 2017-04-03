@@ -28,7 +28,7 @@ public class ExpToASCII extends ExpUnaria {
 	@Override
 	public Valor avaliar(AmbienteExecucao amb) {
 
-		return new ValorInteiro((((ValorChar) getExp().avaliar(amb)).valor().charValue()));
+		return new ValorInteiro(((ValorChar) getExp().avaliar(amb)).valor().charValue());
 	}
 
 	/**
