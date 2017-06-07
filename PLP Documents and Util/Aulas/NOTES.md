@@ -167,7 +167,7 @@ var add3 = add(3);
 add3(4);
 ```
 
-## Aula 8 - Linguagem funcional LF2
+## Aula 8 - Linguagem funcional LF2 e 3
 
 * Exemplo de currying em LF2:
 ```
@@ -191,5 +191,107 @@ Id x = x
 x + 1 = x - 1
 x = x - 1 + 1
 Id x = x
-
 ```
+
+* Prova por indução:
+    - Caso base (0)
+    - Caso indutivo (n+1)
+
+Exemplo:
+```
+//Considere a função a seguir, para x e y naturais
+prod(0,y) = 0                  (1)
+prod(x,y) = y + prod(x-1,y)    (2)
+
+//Provar:
+(B) prod(y,x+1) = y + prod(y,x)
+
+(Y = 0). prod(0,x+1) = 0 = 0 + prod(0,x)
+
+(Y+1). prod(y+1,x+1) = y+1 + prod(y+1,x)
+prod(y+1,x+1)  
+= x+1 + prod(y,x+1)    (2)
+= x+1 + y + prod(y,x)  H.I
+= y+1 + x + prod(y,x)  Aritmética
+= y+1 + prod(y+1,x)    (2)
+
+//Provar:
+(C) prod(x,y) = prod(y,x)
+
+(x = 0). prod(0,y) = 0 = prod(y,0), por (A)
+
+(x+1). prod(x+1,y) = prod(y,x+1)
+prod(x+1,y)
+= y + prod(x,y)  (2)
+= y + prod(y,x)  H.I
+= prod(y,x+1)    (B)
+```
+
+* Notação A notação [x1,...,xn] é uma abreviação para x1 : x2 : ... : xn : []
+* Função head(x : xs) = x
+* Função tail(x : xs) = xs
+* ^^ (Concatenação)
+    - (x : xs) ^^ ys = x : (xs ^^ ys)
+* fold (function to combine all elements given a certain operation)
+    - The folding of the list [1,2,3,4,5] with the addition operator would result in 15
+    - let fun fold op elem list
+* map (aplica função passada como parametro a todos os elementos da lista)
+    - map f (x : xs) = f(x) : map(f,xs)
+* filter (filtra a lista dado um condicional)
+    - filter positivo [-5, 3, -2, 0, 4], onde positivo(x) = (x > 0)
+* Compreensão de listas em LF3  [exp qualificador,...,qualificador]
+    - [x+1 for x in 3..1 ] = = [4, 3, 2]
+    - [x+1 for x in 3..1 if x==1] = = [2]
+
+## Aula 16 e 17 - Imperativa 1
+
+* Memória abstrata: Id -> Valor
+* Memória concreta: Id -> Ref -> Valor
+* Limites de um array
+    - estático: determinado em tempo de compilação
+    - dinâmico: determinado no momento da criação da variável
+    - flexível: não é determinado em nenhum momento
+* Variáveis Locais: existem durante execução de um bloco
+* Variáveis Globais: existem durante a execução de todo programa
+* Variáveis da heap:
+    - criadas e destruídas em qualquer parte do programa, por comando especiais
+    - anônimas, acessadas via ponteiros
+    - referências pendentes
+* Comando: construção que atualiza variáveis; um ponto de entrada, um ponto de saída; múltiplos pontos de entrada, múltiplos pontos de saída. goto, throw, continue, break.
+* Atribuição:
+    - AcessoVariável := Expressão
+    - AV := AV’ := AV’’ := Expressão
+    - AV, AV’ := Expressão, Expressão’
+* Composição colateral: (Comando , Comando’) os dois comandos são executados, em uma ordem qualquer; não determinismo
+* Composição Paralela: (Comando || Comando’) os dois comandos são executados, de maneira concorrente
+concorrência e não determinismo; Composição seqüencial e colateral são casos especiais
+
+## Aula 19 - Imperativa 2
+
+* Abstração: Processo pelo qual ignora-se detalhes irrelevantes, concentran-se em idéias gerais ao invés de caracaterizações delas. O que? versus Como?
+    - função que contém uma expressão
+    - procedimento que contém um comando (que retorno ou não um valor)
+    - uma abstração pode ser invocada
+    - Uma abstração pode ter um identificador ou não (anônima)
+* Outros tipos de abstrações
+    - Acesso a variável (Id, Id.Id, Id[Id])
+    - Declarações
+* Parâmetros e Argumentos:
+    - Argumento (São valores da linguagem)
+        - Valor fornecido para a execução do objeto da abstração
+    - Parâmetro formal (denota uma variável local à abstração)
+        - Identificador utilizado na construção da abstração para denotar um argumento
+    - Parâmetro real (É avaliado resultando no argumento)
+        - Expressão cuja avaliação resulta em um argumento; fornecida na invocação da abstração
+* Mecanismos de cópia
+    - Valor (LF2, LI2, Java, Pascal, C, ML)
+        - O argumento é copiado para a variável local antes da execução do objeto da abstração
+        - A variável local pode ser não só inspecionada, mas também atualizada
+    - Resultado
+        - O argumento tem que ser uma referência para uma variável
+        - O valor inicial da variável local não é determinado
+        - No final da execução do objeto da abstração, o valor da variável local é copiado para a variável cuja referência foi recebida como argumento
+    - Valor-resultado
+        - O argumento tem que ser uma referência para uma variável
+        - O valor da variável associada ao argumento é copiado para a variável local antes da execução do objeto da abstração
+        - No final da execução do objeto da abstração, o valor da variável local é copiado para a variável cuja referência foi recebida como argumento
