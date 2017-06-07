@@ -53,13 +53,13 @@ Class: Programming Languages and Paradigms
 
 ## Imperative
 
-### Impreative Language 1
+### Imperative Language 1
 
 - Extends Expression Language 1 with identifiers (variables) and assignment, input / output, and flow control commands
 - The context includes three components: A (dynamic) mapping of identifiers into values; a list of input values; a list of output values
 - A program is a command
 
-### Impreative Language 2 (Code Not Found, not available on site)
+### Imperative Language 2 (Code Not Found, not available on site)
 
 - Extends Imperative Language 1 with parameterized and recursive procedures
 - The body of a procedure is a command and the call of an idem procedure
