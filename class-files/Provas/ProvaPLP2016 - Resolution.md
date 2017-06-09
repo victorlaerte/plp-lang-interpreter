@@ -1,5 +1,35 @@
 ## Prova 2016
 
+# Question 1
+```
+head(x:xs) = x
+tail(x:xs) = xs
+ 
+Lista = [a,b,c,d]
+n = 2
+ 
+E([],n) = [ ]
+E(Lista, 2) = E(Lista, 2, 0)
+ 
+ 
+E(Lista, n):
+	if (n-1 > 0) then
+		[head(Lista)] ++ E(tail(lista), n-1)
+	else
+		[ ]
+```
+
+```
+D([ ],n) = [ ] 
+D(Lista, n) = D2(Lista, n, 0)
+ 
+D(Lista, n):
+	if (n-1 > 0) then
+		D(tail(Lista), n-1)
+	else
+		[tail(Lista)]
+```
+
 # Question 5
 
 1)
