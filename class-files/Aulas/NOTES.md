@@ -61,7 +61,7 @@ Uma função de alta ordem é uma função que pode receber outra como parâmetr
     - mapeamento de identificadores (nomes de função) e definições de função
 * LF2
     - Estende LF1 com alta ordem;
-    - contexto de exeução inclui um único mapeamento de identificadores em valores;
+    - contexto de execução inclui um único mapeamento de identificadores em valores;
     - o resultado da avaliação de uma expressão pode ser uma função, uma função pode ser um argumento de outra função
 * LI1
     - mapeamento dinâmico de identificadores em valores;
